@@ -1,0 +1,20 @@
+Question 2 - Insert at end of doubly linked list
+================================
+
+Adding a stop at the end when there are n stops:
+
+Time complexity: O(1)
+
+Reason:
+We keep a tail pointer. To add at the end we only:
+- malloc one node
+- link tail->next to the new node
+- update tail
+
+We do NOT walk through all n nodes.
+
+If we only had a head pointer we would need O(n) to find the last node.
+Our program keeps both head and tail, so insert at end is constant time
+and does not depend on n.
+
+This matches the insertAtEnd() function in bus_route.c.

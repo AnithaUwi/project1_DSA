@@ -1,0 +1,34 @@
+Question 4 - BST student search
+================================
+
+Duplicate last names:
+If strcmp(last name) == 0 at a node, the new record is inserted in the
+RIGHT subtree. Search uses bstSearch() to check if any match exists, then
+printMatches() (in-order traversal) to list all records with that last name.
+
+Search time in a BST with n nodes (function bstSearch):
+
+Best case: O(1)
+  The last name is at the root. One comparison, done.
+
+Average case: O(log n)
+  Tree is reasonably balanced. We follow one path from root, height about log n.
+
+Worst case: O(n)
+  BST becomes a chain (e.g. names added in alphabetical order).
+  Every search may visit all n nodes.
+
+General: O(h) where h is tree height (between log n and n).
+
+Binary Tree vs Binary Search Tree:
+- Binary tree: up to 2 children per node, no ordering rule on values.
+- BST: left subtree keys < node < right subtree keys (here, by last name).
+  That ordering lets us skip half the tree each step when searching.
+
+Linear search in file vs BST in memory:
+- File: read lines until match, O(n) per search, plus disk I/O if not cached.
+- BST: build tree once O(n log n), then each search O(log n) average.
+
+For a growing student file and many lookups (reporting by last name), BST is
+more suitable. For one-off search on a tiny file, linear search is simpler
+but does not scale when n or query count increases.

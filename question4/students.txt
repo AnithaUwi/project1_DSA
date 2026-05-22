@@ -1,0 +1,11 @@
+Alice|queen|85
+Angel|Ingabire|72
+Bruce|Shimwa|85
+David|King|91
+Eve|Davis|68
+Frank|Thadee|72
+Grace|Wilson|95
+Henry|Nine|55
+Ivy|Iris|85
+Jack|Marc|78
+Anna|Sam|88

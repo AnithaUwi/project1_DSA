@@ -1,0 +1,24 @@
+Question 3 - Insert into binary tree
+================================
+
+Insertion rule used: Binary Search Tree (BST)
+- if value < node go left
+- if value > node go right
+- if empty place, insert there
+(Same rule documented in binary_tree.c and printed when the program runs.)
+
+Time to insert one new node when tree already has n nodes:
+
+The insertBST() function walks from the root down one path to a leaf.
+The cost depends on tree height h, not on visiting every node.
+
+  Best case (balanced tree):     h = log n   ->  O(log n)
+  Average case:                  h ~ log n   ->  O(log n)
+  Worst case (skewed BST):       h = n       ->  O(n)
+
+General form: O(h) where h is between log n and n.
+
+This is directly linked to BST insertion: each step compares once and
+moves left or right, so the number of steps equals the height of the tree.
+
+Building all 68 nodes: 68 separate inserts, about O(n log n) on average.

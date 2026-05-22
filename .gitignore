@@ -1,0 +1,10 @@
+# compiled programs
+*.exe
+*.out
+
+# generated output (recreated when you run Q1)
+question1/sorted_students.txt
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore

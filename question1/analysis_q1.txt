@@ -1,0 +1,28 @@
+Question 1 - Quick Sort Analysis
+================================
+
+1) Running time (n = number of records)
+
+Best case:
+  The pivot splits the array into two nearly equal parts every time.
+  T(n) = 2T(n/2) + n
+  Solving this gives T(n) = O(n log n)
+
+Average case:
+  On typical data the partitions are reasonably balanced on average.
+  Expected time is still O(n log n)
+
+Worst case:
+  The pivot is always the smallest or largest (e.g. already sorted by grade).
+  T(n) = T(n-1) + n, which is 1 + 2 + ... + n
+  So T(n) = O(n^2)
+
+2) Why Quick Sort instead of Insertion Sort?
+
+- Records are loaded from a file into an array, then sorted once in memory.
+- For large n, insertion sort needs O(n^2) comparisons and shifts in the worst case.
+- Quick sort has O(n log n) average time, which scales better for bigger student lists.
+- File-based batch processing fits quick sort: read all, sort, write sorted_students.txt.
+- Insertion sort is only really better for very small n or data that is already almost sorted.
+
+Sorting rule used: grade ascending; if grades are equal, last name (lexicographic).
